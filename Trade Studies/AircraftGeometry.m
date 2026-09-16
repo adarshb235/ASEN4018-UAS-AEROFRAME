@@ -54,27 +54,54 @@ while i <= count
         z_cg_Prop = GeometryStruct.heightCage/2; % may need to add parameter to excel file
         z_cg_tot = (massCage * z_cg_Cage + (4 * massArm * z_cg_Prop) + (4 * massProp * z_cg_Prop) + (4 * massBatt * z_cg_Batt) + massAvi * z_cg_Avi)/massTot;
 
+        L_out = GeometryStruct.sideLength; % X and Y outer dimension
+        H_out = GeometryStruct.heightCage; % Z outer dimension
+        t_cage = GeometryStruct.thickCage;
 
-        r_cage = (s_out * sqrt(2)) / 2;
-        % Motor center radial distance from vehicle center
-        r_motor = r_cage + GeometryStruct.lengthArm; 
+        L_in = L_out - 2 * t_cage;
+        H_in = H_out - 2 * t_cage;
+
+        V_out = (L_out^2) * H_out;
+        V_in  = (L_in^2) * H_in;
+        
+        L_in = L_out - 2 * t_cage;
+        H_in = H_out - 2 * t_cage;
+        
+        if L_in < 0
+           L_in = 0; 
+        end
+
+        if H_in < 0
+            H_in = 0; 
+        end
+
+
+        r_cage = (GeometryStruct.sideLength * sqrt(2)) / 2; 
+        r_motor = r_cage + GeometryStruct.lengthArm; % Motor center radial distance from vehicle center
         x_m = r_motor * cosd(45);
         y_m = r_motor * sind(45);
         
         % Delta Z relative to total CG
         dz_cage = z_cg_Cage - z_cg_tot;
-        dz_arm  = z_cg_Arm  - z_cg_tot;
+        dz_arm  = z_cg_Prop  - z_cg_tot;
         dz_prop = z_cg_Prop - z_cg_tot;
         dz_batt = z_cg_Batt - z_cg_tot;
         dz_avi  = z_cg_Avi  - z_cg_tot;
         
-        % --- Inertia: 1. Cage ---
-        I_cage_local = (1/6) * densityCage * (s_out^5 - s_in^5);
-        Ixx_cage = I_cage_local + massCage * dz_cage^2;
-        Iyy_cage = I_cage_local + massCage * dz_cage^2;
-        Izz_cage = I_cage_local;
+        Ixx_out = (1/12) * densityCage * V_out * (L_out^2 + H_out^2);
+        Izz_out = (1/12) * densityCage * V_out * (L_out^2 + L_out^2);
         
-        % Integral of r^2 dm along the arm:
+        Ixx_in = (1/12) * densityCage * V_in * (L_in^2 + H_in^2);
+        Izz_in = (1/12) * densityCage * V_in * (L_in^2 + L_in^2);
+        
+        Ixx_cage_local = Ixx_out - Ixx_in;
+        Iyy_cage_local = Ixx_out - Ixx_in; % Symmetric in X and Y
+        Izz_cage_local = Izz_out - Izz_in;
+        
+        Ixx_cage = Ixx_cage_local + massCage * dz_cage^2;
+        Iyy_cage = Iyy_cage_local + massCage * dz_cage^2;
+        Izz_cage = Izz_cage_local;
+
         Izz_arms = 4 * massArm * ((1/3)*GeometryStruct.lengthArm^2 + ...
                    r_cage^2 + GeometryStruct.lengthArm*r_cage);
         Ixx_arms = 0.5 * Izz_arms + 4 * massArm * dz_arm^2;
@@ -120,7 +147,7 @@ while i <= count
         GeometryStruct.Izz = Izz_tot;
         GeometryStruct.I_matrix = I_matrix;
 
-        % --- Stevens & Lewis Inertia Coefficients ---
+        % Inertia Coefficients
         Ixx = Ixx_tot;
         Iyy = Iyy_tot;
         Izz = Izz_tot;
@@ -150,7 +177,7 @@ while i <= count
     GeometryStruct.Gamma6 = Gamma6;
     GeometryStruct.Gamma7 = Gamma7;
     GeometryStruct.Gamma8 = Gamma8;
-    
+
     ACGeo{i} = GeometryStruct;
     i = i + 1;
    
