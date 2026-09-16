@@ -27,7 +27,7 @@ For questions on the layout of the Git, reach out to Adarsh.
 
 #### Adarsh
 - Developing the current dynamics MATLAB model to simulate stability in hover/glide based on different geometries.
-  -  Testing chassis geometry, CG balance (location of avionics/battery/etc.), arm length, material choices.
+  -  Testing chassis geometry/sizing, CG balance (location of avionics/battery/etc.), arm length, material choices.
 - Developing thermal simulation model to estimate if we should be concerned about heat build up during the 15 minutes of operation.
   -  If heat build up is a problem, compare the solutions of venting or hollow cage.
 
