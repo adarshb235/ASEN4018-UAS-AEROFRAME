@@ -1,5 +1,10 @@
 # WELCOME TO THE UAS Aerodynamics / Airframe Team Git Page for Section 13 of Fall 2026 Senior Design!
 
+#### Team Lead: Andrew Naiberg
+#### Team Members: Adarsh Boddeda, Harvey Watson, Lucas Brooks
+
+For questions on the layout of the Git, reach out to Adarsh. 
+
 ### Summary of Key Requirements
 - Volumetric limits: 50 cm x 50 cm x 30 cm
 - Total Mass: 25 lb max (11.3 kg)
