@@ -3,7 +3,7 @@
 #### Team Lead: Andrew Naiberg
 #### Team Members: Adarsh Boddeda, Harvey Watson, Lucas Brooks
 
-| For questions on the layout of the Git, reach out to Adarsh. |
+__For questions on the layout of the Git, reach out to Adarsh.__
 
 ### Key Objectives and Reminders
 - All decisions should be tied to the original requirements.
