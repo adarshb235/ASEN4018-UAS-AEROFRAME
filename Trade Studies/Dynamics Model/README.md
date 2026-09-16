@@ -1,4 +1,4 @@
-# READ ME FOR INFO ACROSS THE BOARD IN TRADE STUDIES SCRIPTS
+# READ ME FOR INFO ACROSS THE BOARD IN MAIN SIMULATION SCRIPTS
 
 ### About the Excel Sheet:
 - File will be used to iteratively compare designs. 
