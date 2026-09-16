@@ -1,4 +1,4 @@
-# WELCOME TO THE UAS Aerodynamics / Airframe Team Git Page for Section 13 of Fall 2026 Senior Design!
+# **WELCOME TO THE UAS Aerodynamics / Airframe Team Git Page for Section 13 of Fall 2026 Senior Design!**
 
 #### Team Lead: Andrew Naiberg
 #### Team Members: Adarsh Boddeda, Harvey Watson, Lucas Brooks
@@ -40,3 +40,4 @@ For questions on the layout of the Git, reach out to Adarsh.
 
 #### Lucas
 - Working on CAD / mass model for airframe.
+  
