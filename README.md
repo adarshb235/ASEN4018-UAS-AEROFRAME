@@ -5,6 +5,11 @@
 
 For questions on the layout of the Git, reach out to Adarsh. 
 
+### Key Objectives and Reminders
+- All decisions should be tied to the original requirements.
+- Documentation is paramount, so please continue to put comments on any Git commits and notes through these .md files.
+- Be communicative with leadership and other subteams.
+
 ### Summary of Key Requirements
 - Volumetric limits: 50 cm x 50 cm x 30 cm
 - Total Mass: 25 lb max (11.3 kg)
