@@ -37,7 +37,7 @@ __For questions on the layout of the Git, reach out to Adarsh.__
 #### Harvey
 - Wrote documentation for estimations of force and moments experienced by the drone in a worst-case-scenario crash event.
   - Estimations for shear force and moment values given by estimations from the propulsion team.
-- Created a MATLAB structural simulation to determine bending deflection as a function of mass, diameter, and length of a material optimizing for high strength to weight ratio.
+- Created a MATLAB structural simulation to determine bending deflection as a function of mass, diameter, length, and cross-sectional shape of a material optimizing for high strength to weight ratio.
   - Trade Studied materials include:
     - Carbon Fibre
     - Aluminium 6061
