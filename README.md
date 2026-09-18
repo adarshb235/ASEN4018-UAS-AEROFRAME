@@ -39,11 +39,11 @@ __For questions on the layout of the Git, reach out to Adarsh.__
   - Estimations for shear force and moment values given by estimations from the propulsion team.
 - Created a MATLAB structural simulation to determine bending deflection as a function of mass, diameter, and length of a material optimizing for high strength to weight ratio.
   - Trade Studied materials include:
-  - Carbon Fibre
-  - Aluminium 6061
-  - Fiberglass
-  - Carbon Fibre Reinforced Nylon (PA6-CF, 3D Printable)
-  - Titanium Alloy Ti-6Al-4V (6% Aluminium 4% Vanadium)
+    - Carbon Fibre
+    - Aluminium 6061
+    - Fiberglass
+    - Carbon Fibre Reinforced Nylon (PA6-CF, 3D Printable)
+    - Titanium Alloy Ti-6Al-4V (6% Aluminium 4% Vanadium)
 
 #### Lucas
 - Working on CAD / mass model for airframe.
