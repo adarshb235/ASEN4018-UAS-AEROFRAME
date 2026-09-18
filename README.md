@@ -35,8 +35,15 @@ __For questions on the layout of the Git, reach out to Adarsh.__
 - Working on CAD / mass model for airframe.
 
 #### Harvey
-- Working on calculations for deflection of arms in crash to determine optimal material choice for arms.
-  - Completing MATLAB implementation as well.
+- Wrote documentation for estimations of force and moments experienced by the drone in a worst-case-scenario crash event.
+  - Estimations for shear force and moment values given by estimations from the propulsion team.
+- Created a MATLAB structural simulation to determine bending deflection as a function of mass, diameter, and length of a material optimizing for high strength to weight ratio.
+  - Trade Studied materials include:
+  - Carbon Fibre
+  - Aluminium 6061
+  - Fiberglass
+  - Carbon Fibre Reinforced Nylon (PA6-CF, 3D Printable)
+  - Titanium Alloy Ti-6Al-4V (6% Aluminium 4% Vanadium)
 
 #### Lucas
 - Working on CAD / mass model for airframe.
